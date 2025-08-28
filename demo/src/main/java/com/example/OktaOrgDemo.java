@@ -29,7 +29,6 @@ public class OktaOrgDemo {
   static final String CLIENT_ID     = "0oauwy143vqZWdw3c697";
   static final String CLIENT_SECRET = "d0cefwx5j_gExseX-G9leNFdAbH0GqYfwbE6BSN_fgkZDpIAbAmut2Jk1DmLb5sC"; // <- put new/rotated secret here
   static final String REDIRECT      = "http://localhost:8081/authorization-code/callback";
-  // keep scopes as plain, space-separated text (don’t pre-encode)
   static final String SCOPES        = "okta.orgs.read okta.users.read okta.logs.read";
 
   static final OkHttpClient HTTP = new OkHttpClient();
@@ -75,7 +74,7 @@ public class OktaOrgDemo {
       + "?response_type=code"
       + "&client_id="    + enc(CLIENT_ID)
       + "&redirect_uri=" + enc(REDIRECT)
-      + "&scope="        + enc(SCOPES)   // now actually passing scopes
+      + "&scope="        + enc(SCOPES)   
       + "&state="        + enc(state);
 
     open(url);
@@ -130,7 +129,7 @@ public class OktaOrgDemo {
   }
 
   static void refresh() throws IOException {
-    if (tok.refresh == null) return; // no refresh token (maybe you omitted offline_access)
+    if (tok.refresh == null) return; 
     RequestBody form = new FormBody.Builder()
       .add("grant_type", "refresh_token")
       .add("refresh_token", tok.refresh)
