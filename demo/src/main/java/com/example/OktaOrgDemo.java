@@ -27,7 +27,7 @@ public class OktaOrgDemo {
 
   static final String DOMAIN        = "https://integrator-4310404.okta.com";
   static final String CLIENT_ID     = "0oauwy143vqZWdw3c697";
-  static final String CLIENT_SECRET = "d0cefwx5j_gExseX-G9leNFdAbH0GqYfwbE6BSN_fgkZDpIAbAmut2Jk1DmLb5sC"; // <- put new/rotated secret here
+  static final String CLIENT_SECRET = "d0cefwx5j_gExseX-G9leNFdAbH0GqYfwbE6BSN_fgkZDpIAbAmut2Jk1DmLb5sC"; 
   static final String REDIRECT      = "http://localhost:8081/authorization-code/callback";
   static final String SCOPES        = "okta.orgs.read okta.users.read okta.logs.read";
 
