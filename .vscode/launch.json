@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "OktaOrgDemo",
+      "request": "launch",
+      "mainClass": "com.example.OktaOrgDemo",
+      "projectName": "demo"
+    },
+    {
+      "type": "java",
+      "name": "Run Main",
+      "request": "launch",
+      "mainClass": "com.example.Main"
+    },
+    {
+      "type": "java",
+      "name": "Run OktaOrgDemo",
+      "request": "launch",
+      "mainClass": "com.example.OktaOrgDemo",
+      "projectName": "okta-org-demo",
+      "env": {
+        "OKTA_DOMAIN": "https://integrator-4310404.okta.com",
+        "OKTA_CLIENT_ID": "0oauwy143vqZWdw3c697",
+        "OKTA_CLIENT_SECRET": "d0cefwx5j_gExseX-G9leNFdAbH0GqYfwbE6BSN_fgkZDpIAbAmut2Jk1DmLb5sC",
+        "OKTA_REDIRECT_URI": "http://localhost:8080/authorization-code/callback"
+      }
+    }
+  ]
+}
